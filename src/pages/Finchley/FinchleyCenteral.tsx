@@ -1,6 +1,13 @@
 import finchley_im1 from "@/assets/finchley-im1.png";
 import { Clock, MapPin, Phone } from "lucide-react";
 
+// const services = [
+//   { title: "Beauty", image: ban1 },
+//   { title: "Advanced Skin Care", image: ban2 },
+//   { title: "Massage", image: ban3 },
+//   { title: "Laser Hair Removal", image: ban4 },
+// ];
+
 function FinchleyCenteral() {
   return (
     <>
@@ -55,7 +62,7 @@ function FinchleyCenteral() {
       </section>
 
       {/* --- */}
-        <section className="w-full bg-white py-16 border-t border-gray-100">
+        <section className="w-full bg-white py-16">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3">
 
         {/* Hours */}
@@ -101,7 +108,7 @@ function FinchleyCenteral() {
         </div>
 
       </div>
-    </section>
+       </section>
     </>
   );
 }
