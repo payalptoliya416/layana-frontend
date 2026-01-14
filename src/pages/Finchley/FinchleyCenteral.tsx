@@ -1,17 +1,51 @@
 import finchley_im1 from "@/assets/finchley-im1.png";
 import { Clock, MapPin, Phone } from "lucide-react";
+import PageBanner from "../../component/common/home/PageBanner";
+import home_bg from "@/assets/home_bg.png";
+import ban3 from "@/assets/ban3.png";
+import ban2 from "@/assets/ban2.png";
+import ban5 from "@/assets/ban5.png";
+import ban6 from "@/assets/ban6.png";
+import ban7 from "@/assets/ban7.png";
+import ban8 from "@/assets/ban8.png";
+import ban9 from "@/assets/ban9.png";
+import ban10 from "@/assets/ban10.png";
+import ServiceCard from "../../component/common/home/ServiceCard";
+import SplitContentSection from "../../component/common/home/SplitContentSection";
+import ever2 from "@/assets/ever2.png";
+import home_banner from "@/assets/home-banner.png";
+import slide3 from "@/assets/slide3.png";
+import CommonHeroSlider from "../../component/common/home/CommonHeroSlider";
 
-// const services = [
-//   { title: "Beauty", image: ban1 },
-//   { title: "Advanced Skin Care", image: ban2 },
-//   { title: "Massage", image: ban3 },
-//   { title: "Laser Hair Removal", image: ban4 },
-// ];
+const homeSlides = [
+  {
+    image: slide3,
+    title: "Relax, Indulge, Enjoy and  Love Yourself.",
+    text: "",
+  },
+  {
+    image: slide3,
+    title: "Luxury Spa\nExperience",
+    text: "",
+  },
+];
+
+const services = [
+  { title: "Massage", image: ban3 },
+  { title: "Spa Programs", image: ban5 },
+  { title: "Facials & Peels", image: ban6 },
+  { title: "Skin", image: ban2 },
+  { title: "Laser Hair Removal", image: ban7 },
+  { title: "For your Eyes", image: ban8 },
+  { title: "Waxing", image: ban9 },
+  { title: "Nails", image: ban10 },
+];
 
 function FinchleyCenteral() {
   return (
     <>
-      <section className="w-full bg-white py-16">
+      <CommonHeroSlider slides={homeSlides} />
+      <section className="w-full bg-white py-12 lg:py-[110px]">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
           <div className="w-full">
             <img
@@ -62,34 +96,34 @@ function FinchleyCenteral() {
       </section>
 
       {/* --- */}
-        <section className="w-full bg-white py-16">
+        <section className="w-full bg-white pb-12 lg:pb-[110px]">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3">
 
         {/* Hours */}
         <div className="flex flex-col items-center text-center px-6">
-          <div className="w-12 h-12 rounded-full bg-[#f6efec] flex items-center justify-center mb-4">
-            <Clock className="w-5 h-5 text-black" />
+          <div className="w-[45px] h-[45px] rounded-full bg-[#f6efec] flex items-center justify-center mb-[15px]">
+            <Clock className="w-[18px] h-[18px] text-black" />
           </div>
-          <h4 className="tracking-[0.2em] text-sm uppercase mb-2">Hours</h4>
-          <p className="text-gray-500 text-sm leading-relaxed">
+          <h4 className="tracking-[0.2em] text-[22px] leading-[24px] uppercase mb-3">Hours</h4>
+          <p className="text-para text-lg font-quattro">
             Mon To Sun <br />
             10:00 am to 09:00 pm
           </p>
         </div>
 
         {/* Location */}
-        <div className="flex flex-col items-center text-center px-6 border-y md:border-y-0 md:border-x border-gray-200">
-          <div className="w-12 h-12 rounded-full bg-[#f6efec] flex items-center justify-center mb-4">
-            <MapPin className="w-5 h-5 text-black" />
+        <div className="flex flex-col items-center text-center px-6 border-y md:border-y-0 md:border-x border-gray-200 py-5 md:py-0 md:my-0 my-5">
+          <div className="w-[45px] h-[45px] rounded-full bg-[#f6efec] flex items-center justify-center mb-[15px]">
+            <MapPin className="w-[18px] h-[18px] text-black" />
           </div>
-          <h4 className="tracking-[0.2em] text-sm uppercase mb-2">Location</h4>
-          <p className="text-gray-500 text-sm leading-relaxed">
+          <h4 className="tracking-[0.2em] text-[22px] leading-[24px] uppercase mb-3">Location</h4>
+          <p className="text-para text-lg font-quattro">
             92 – 94, Ballards Lane, London, <br />
             N3 2DL
           </p>
           <a
             href="#"
-            className="mt-3 text-sm tracking-widest underline underline-offset-4 hover:text-gray-500"
+            className="mt-[10px] text-sm tracking-widest underline underline-offset-0 hover:text-para"
           >
             Get Directions
           </a>
@@ -97,11 +131,11 @@ function FinchleyCenteral() {
 
         {/* Contact */}
         <div className="flex flex-col items-center text-center px-6">
-          <div className="w-12 h-12 rounded-full bg-[#f6efec] flex items-center justify-center mb-4">
-            <Phone className="w-5 h-5 text-black" />
+          <div className="w-[45px] h-[45px] rounded-full bg-[#f6efec] flex items-center justify-center mb-[15px]">
+            <Phone className="w-[18px] h-[18px] text-black" />
           </div>
-          <h4 className="tracking-[0.2em] text-sm uppercase mb-2">Contact</h4>
-          <p className="text-gray-500 text-sm leading-relaxed">
+          <h4 className="tracking-[0.2em] text-[22px] leading-[24px] uppercase mb-3">Contact</h4>
+          <p className="text-para text-lg font-quattro">
             0208 371 6922 <br />
             finchley@layana.co.uk
           </p>
@@ -109,6 +143,41 @@ function FinchleyCenteral() {
 
       </div>
        </section>
+
+       {/* ------ */}
+             
+<PageBanner
+  title="Your wellness in"
+  subtitle="your control"
+  backgroundImage={home_bg}
+/>
+{/* -------- */}
+  <section className="w-full">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+        {services.map((item) => (
+          <ServiceCard
+            key={item.title}
+            title={item.title}
+            image={item.image}
+          />
+        ))}
+      </div>
+    </section>
+    <div className="py-12 lg:pb-[110px]"/>
+    {/* --------- */}
+        <SplitContentSection
+        tag="SERVICES"
+        title="Cosmetic beauty treatments perfect for your nails"
+        description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."
+        image={ever2}
+        buttonText="Read More"
+      />
+      {/* --------- */}
+           <section className="py-12 lg:py-[110px]">
+        <div className="container mx-auto">
+          <img src={home_banner} alt="banner" className="w-full" />
+        </div>
+      </section>
     </>
   );
 }

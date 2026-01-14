@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+
 import SocialStrip from "./SocialStrip";
 import white_logo from "@/assets/white_logo.png";
 
@@ -8,11 +8,12 @@ function Footer() {
       <SocialStrip />
       <footer className="bg-primary text-white pt-[38px]">
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 pb-16">
             {/* Logo */}
-            <div>
+            <div className="lg:col-span-1 mx-auto">
               <img src={white_logo} alt="Layana" />
             </div>
+              <div className="grid grid-cols-2 gap-8 lg:col-span-2">
 
                 <div>
               <ul className="space-y-[10px] text-xs font-quattro">
@@ -38,9 +39,10 @@ function Footer() {
                 <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:text-white">Terms & Conditions</a></li>
             </ul>
             </div>
+              </div>
 
             {/* Subscribe */}
-            <div>
+            <div className="md:col-span-1">
               <h4 className="font-mulish text-lg leading-[16px] mb-5">
                 We don’t keep our secrets!
               </h4>

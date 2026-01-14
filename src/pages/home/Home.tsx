@@ -19,6 +19,24 @@ import team2 from "@/assets/team2.png";
 import team3 from "@/assets/team3.png";
 import team4 from "@/assets/team4.png";
 import BrandSlider from "../../component/common/home/BrandSlider";
+import PageBanner from "../../component/common/home/PageBanner";
+import SplitContentSection from "../../component/common/home/SplitContentSection";
+import slide1 from "@/assets/hero1.png";
+import slide2 from "@/assets/hero2.jpeg";
+import CommonHeroSlider from "../../component/common/home/CommonHeroSlider";
+
+const homeSlides = [
+  {
+    image: slide1,
+    title: "Your Wellness in\nYour Control",
+    text: "A team of professional hairstylists with more than fifteen years of experience in fashioning memorable and creative looks",
+  },
+  {
+    image: slide2,
+    title: "Luxury Spa\nExperience",
+    text: "Indulge in premium treatments designed to relax your body and rejuvenate your skin.",
+  },
+];
 
 const services = [
   { title: "Beauty", image: ban1 },
@@ -56,10 +74,11 @@ const team = [
 function Home() {
   return (
     <>
-      <section className="py-12 lg:py-[110px]">
+    <CommonHeroSlider slides={homeSlides} />
+      <section className="pt-12 lg:pt-[110px]">
         <div className="container mx-auto">
-          <div className="grid grid-cols-12 gap-[50px]">
-            <div className="col-span-12 lg:col-span-6">
+          <div className="grid grid-cols-12 lg:gap-[50px]">
+            <div className="col-span-12 lg:col-span-6 mb-5 lg:mb-0">
               <p className="text-[25px] leading-[36px] font-light text-justify">
                 A team of professional hairstylists with more than fifteen years
                 of experience in fashioning memorable and creative looks
@@ -81,8 +100,8 @@ function Home() {
       {/* ---- */}
       <section className="py-12 lg:py-[110px]">
         <div className="container mx-auto">
-          <div className="grid grid-cols-12 gap-[50px]">
-            <div className="col-span-12 lg:col-span-6">
+          <div className="grid grid-cols-12 lg:gap-[50px]">
+            <div className="col-span-12 lg:col-span-6 mb-[50px] lg:mb-0">
               <div>
                 <img src={im1} alt="finchley" className="w-full mb-5" />
                 <h3 className="font-mulish text-[12px] leading-[14px] font-normal tracking-[0.1em] uppercase mb-[15px]">
@@ -130,45 +149,13 @@ function Home() {
         </div>
       </section>
       {/* --- */}
-      <section className="relative w-full py-16 lg:py-32 overflow-hidden">
-        {/* LEFT BEIGE BACKGROUND BAR */}
-        <div className="absolute inset-y-0 left-0 w-[55%] bg-[#f6eee9]"></div>
-
-        {/* MAIN GRID */}
-        <div className="relative container mx-auto px-4 lg:px-0">
-          <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-12">
-            {/* LEFT CONTENT (inside container but over beige) */}
-            <div className="lg:col-span-6 relative z-10 text-center">
-              <p className="font-mulish text-[12px] tracking-[0.2em] uppercase mb-3">
-                Beauty
-              </p>
-
-              <h2 className="font-mulish text-[28px] sm:text-4xl leading-[55px] mb-[25px]">
-                Do even more for your skin in less steps than ever
-              </h2>
-
-              <p className="font-quattro text-para text-base leading-[26px] mb-[35px] max-w-[498px] mx-auto">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation.
-              </p>
-
-              <CommonButton>Read More</CommonButton>
-            </div>
-
-            {/* RIGHT IMAGE – touches screen edge */}
-            <div className="lg:col-span-6 relative z-10">
-              <div className="w-full">
-                <img
-                  src={ever}
-                  alt="Products"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <SplitContentSection
+        tag="Beauty"
+        title="Do even more for your skin in less steps than ever"
+        description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."
+        image={ever}
+        buttonText="Read More"
+      />
       {/* --- */}
       <section className="py-12 lg:py-[110px]">
         <div className="container mx-auto">
@@ -176,49 +163,46 @@ function Home() {
         </div>
       </section>
       {/* ------ */}
-      <section className="relative w-full h-[400px] bg-center bg-cover flex items-center justify-center"
-        style={{ backgroundImage: `url(${home_bg})` }}>
-        <div className="container mx-auto text-center">
-          <h1 className="font-mulish text-white text-[28px] sm:text-[42px] lg:text-[65px] leading-[75px]">
-            Your wellness in <br className="hidden sm:block" /> your control
-          </h1>
-        </div>
-      </section>
+      <PageBanner
+        title="Your wellness in"
+        subtitle="your control"
+        backgroundImage={home_bg}
+      />
       {/* --- */}
-     <section className="w-full">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-        {services.map((item) => (
-          <ServiceCard
-            key={item.title}
-            title={item.title}
-            image={item.image}
-          />
-        ))}
-      </div>
-    </section>
-    {/* -------- */}
-    <section className="py-12 lg:py-[110px]">
-      <div className="container mx-auto px-4">
-
-        <h2 className="font-quattro text-center text-[36px] mb-14">
-          Our Team
-        </h2>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-14">
-          {team.map((member) => (
-            <TeamCard key={member.name} {...member} />
+      <section className="w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+          {services.map((item) => (
+            <ServiceCard
+              key={item.title}
+              title={item.title}
+              image={item.image}
+            />
           ))}
         </div>
+      </section>
+      {/* -------- */}
+      <section className="py-12 lg:py-[110px]">
+        <div className="container mx-auto px-4">
 
-        <div className="flex justify-center">
-          <CommonButton>View All</CommonButton>
+          <h2 className="font-quattro text-center text-[36px] mb-14">
+            Our Team
+          </h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-[36px] mb-14">
+            {team.map((member) => (
+              <TeamCard key={member.name} {...member} />
+            ))}
+          </div>
+
+          <div className="flex justify-center">
+            <CommonButton>View All</CommonButton>
+          </div>
+
         </div>
-
-      </div>
-    </section>
-    {/* -------- */}
-    <BrandSlider />
-    {/* ---- */}
+      </section>
+      {/* -------- */}
+      <BrandSlider />
+      {/* ---- */}
     </>
   );
 }
