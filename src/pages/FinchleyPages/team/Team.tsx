@@ -1,4 +1,4 @@
-import React from 'react'
+
 import team1 from "@/assets/team1.png";
 import team2 from "@/assets/team2.png";
 import team3 from "@/assets/team3.png";
@@ -20,8 +20,8 @@ import team18 from "@/assets/team18.png";
 import team19 from "@/assets/team19.png";
 import team20 from "@/assets/team20.png";
 
-import TeamCard from '../../component/common/home/TeamCard';
-import SimpleHeroBanner from '../../component/common/home/SimpleHeroBanner';
+import TeamCard from '../../../component/common/home/TeamCard';
+import SimpleHeroBanner from '../../../component/common/home/SimpleHeroBanner';
 import teamBg from "@/assets/teambg.png";
 
 const team = [
@@ -156,7 +156,7 @@ function Team() {
         subtitle="Finchley Central"
       />
         <section className="pt-12 lg:pt-[110px]">
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-[36px]">
                     {team.map((member) => (
                         <TeamCard key={member.name} {...member} />

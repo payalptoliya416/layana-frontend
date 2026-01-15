@@ -25,7 +25,7 @@ const socials = [
 
 export default function SocialStrip() {
   return (
-    <section className="pt-12 lg:pt-[110px] pb-[50px]">
+    <section className="pt-12 lg:pt-[110px] pb-[30px] lg:pb-[50px]">
       <div className="container mx-auto">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-0 text-center">
 

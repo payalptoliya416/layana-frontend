@@ -1,5 +1,5 @@
 import termbg from "@/assets/termbg.png";
-import SimpleHeroBanner from "../../component/common/home/SimpleHeroBanner";
+import SimpleHeroBanner from "../../../component/common/home/SimpleHeroBanner";
 
 type TermItem = {
   title?: string;
@@ -68,7 +68,7 @@ function TermCondition() {
 
               {/* Highlight line */}
               {item.highlight && typeof item.description === "string" && (
-                <h2 className="text-lg sm:text-[28px] sm:leading-[46px] font-mulish italic">
+                <h2 className="text-lg sm:text-[28px] sm:leading-[46px] font-muli italic">
                   {item.description}
                 </h2>
               )}

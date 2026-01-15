@@ -1,6 +1,6 @@
 import finchley_im1 from "@/assets/finchley-im1.png";
 import { Clock, MapPin, Phone } from "lucide-react";
-import PageBanner from "../../component/common/home/PageBanner";
+import PageBanner from "../../../component/common/home/PageBanner";
 import home_bg from "@/assets/home_bg.png";
 import ban3 from "@/assets/ban3.png";
 import ban2 from "@/assets/ban2.png";
@@ -10,12 +10,12 @@ import ban7 from "@/assets/ban7.png";
 import ban8 from "@/assets/ban8.png";
 import ban9 from "@/assets/ban9.png";
 import ban10 from "@/assets/ban10.png";
-import ServiceCard from "../../component/common/home/ServiceCard";
-import SplitContentSection from "../../component/common/home/SplitContentSection";
+import ServiceCard from "../../../component/common/home/ServiceCard";
+import SplitContentSection from "../../../component/common/home/SplitContentSection";
 import ever2 from "@/assets/ever2.png";
 import home_banner from "@/assets/home-banner.png";
 import slide3 from "@/assets/slide3.png";
-import CommonHeroSlider from "../../component/common/home/CommonHeroSlider";
+import CommonHeroSlider from "../../../component/common/home/CommonHeroSlider";
 
 const homeSlides = [
   {
@@ -170,7 +170,7 @@ function FinchleyCenteral() {
         title="Cosmetic beauty treatments perfect for your nails"
         description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."
         image={ever2}
-        buttonText="Read More"
+         buttons={[{ label: "Read More" }]}
       />
       {/* --------- */}
            <section className="py-12 lg:py-[110px]">

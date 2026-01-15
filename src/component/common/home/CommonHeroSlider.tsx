@@ -45,7 +45,7 @@ export default function CommonHeroSlider({ slides, height = "h-screen" }: Props)
             >
 
               <div className="relative z-10 h-full flex items-center pt-[35px] md:pt-0">
-                <div className="container mx-auto px-6 text-white">
+                <div className="container mx-auto text-white">
                   <div className="grid grid-cols-12">
                     <div className="col-span-12 lg:col-span-6 text-center md:text-left">
                       <h1 className="text-[42px] leading-[52px] md:text-[65px] md:leading-[75px] font-normal mb-[25px] font-mulish">

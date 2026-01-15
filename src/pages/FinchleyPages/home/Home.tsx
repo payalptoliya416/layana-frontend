@@ -3,27 +3,27 @@ import im2 from "@/assets/im2.png";
 import ever from "@/assets/ever.png";
 import home_banner from "@/assets/home-banner.png";
 import { Link } from "react-router-dom";
-import CommonButton from "../../component/common/home/CommonButton";
+import CommonButton from "../../../component/common/home/CommonButton";
 import home_bg from "@/assets/home_bg.png";
 
-import ServiceCard from "../../component/common/home/ServiceCard";
+import ServiceCard from "../../../component/common/home/ServiceCard";
 import ban1 from "@/assets/ban1.png";
 import ban2 from "@/assets/ban2.png";
 import ban3 from "@/assets/ban3.png";
 import ban4 from "@/assets/ban4.png";
 
 
-import TeamCard from "../../component/common/home/TeamCard";
+import TeamCard from "../../../component/common/home/TeamCard";
 import team1 from "@/assets/team1.png";
 import team2 from "@/assets/team2.png";
 import team3 from "@/assets/team3.png";
 import team4 from "@/assets/team4.png";
-import BrandSlider from "../../component/common/home/BrandSlider";
-import PageBanner from "../../component/common/home/PageBanner";
-import SplitContentSection from "../../component/common/home/SplitContentSection";
+import BrandSlider from "../../../component/common/home/BrandSlider";
+import PageBanner from "../../../component/common/home/PageBanner";
+import SplitContentSection from "../../../component/common/home/SplitContentSection";
 import slide1 from "@/assets/hero1.png";
 import slide2 from "@/assets/hero2.jpeg";
-import CommonHeroSlider from "../../component/common/home/CommonHeroSlider";
+import CommonHeroSlider from "../../../component/common/home/CommonHeroSlider";
 
 const homeSlides = [
   {
@@ -154,7 +154,7 @@ function Home() {
         title="Do even more for your skin in less steps than ever"
         description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."
         image={ever}
-        buttonText="Read More"
+         buttons={[{ label: "Read More" }]}
       />
       {/* --- */}
       <section className="py-12 lg:py-[110px]">
@@ -182,7 +182,7 @@ function Home() {
       </section>
       {/* -------- */}
       <section className="py-12 lg:py-[110px]">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
 
           <h2 className="font-quattro text-center text-[36px] mb-14">
             Our Team

@@ -50,7 +50,7 @@ export default function Header() {
 
   return (
     <header className="absolute top-0 left-0 w-full z-50">
-        <div className="container mx-auto px-6 py-[22px] flex items-center justify-between text-white">
+        <div className="container mx-auto py-[22px] flex items-center justify-between text-white">
 
           {/* Logo */}
           <Link to="/">
